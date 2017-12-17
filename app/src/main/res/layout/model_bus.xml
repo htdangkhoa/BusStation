@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="16dp">
+
+    <RelativeLayout
+        android:id="@+id/icon"
+        android:layout_width="78dp"
+        android:layout_height="78dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/background_oval_green">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerInParent="true">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/ic_bus"
+                android:scaleType="fitXY"
+                android:layout_gravity="center"/>
+            <TextView
+                android:id="@+id/txtVehicleNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="51B22437"
+                android:textColor="@color/colorWhite"
+                android:textSize="14sp"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtRouteNoAndDisstance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No: 19 - 99km"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/txtRouteName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bến Thành - Khu Chế Xuất Linh Trung - Đại Học Quốc Gia"
+            android:textSize="14sp"/>
+        <TextView
+            android:id="@+id/txtDirection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(lượt đi)"
+            android:textSize="14sp"
+            android:textColor="@color/colorMainGreen"
+            android:textStyle="italic"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_time"/>
+                <TextView
+                    android:id="@+id/txtTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:layout_gravity="center"
+                    android:text="3 phút"
+                    android:textSize="12sp" />
+            </LinearLayout>
+            <Space
+                android:layout_width="8dp"
+                android:layout_height="match_parent" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_speed_bus"/>
+                <TextView
+                    android:id="@+id/txtSpeed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:layout_gravity="center"
+                    android:text="6 km/h"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

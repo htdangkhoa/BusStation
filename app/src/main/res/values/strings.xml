@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Bus Station</string>
+    <string name="google_map_api_key">AIzaSyDPr-sGbpbaBbimolowHIa0XW2EeZLXJBQ</string>
+
+    <string name="bus"><b><u>Bus</u></b></string>
+    <string name="route"><b><u>Route</u></b></string>
+
+    <string name="rationale_location">This app needs access to your location to to get your location.</string>
+</resources>

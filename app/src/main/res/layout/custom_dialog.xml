@@ -1,0 +1,75 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/background_dialog">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="19dp"
+        android:layout_marginBottom="31dp">
+
+        <RelativeLayout
+            android:id="@+id/icon"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:background="@drawable/background_oval_green"
+            android:layout_marginBottom="8dp">
+
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:src="@drawable/ic_bus"
+                android:scaleType="fitXY"
+                android:layout_centerInParent="true"/>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/txtTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:text="You are located near the 412 station."
+            android:textColor="@color/colorBlack"
+            android:layout_marginBottom="5dp"/>
+        <TextView
+            android:id="@+id/txtMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Would you like to see more details about the 412 station?"
+            android:gravity="center"
+            android:textSize="14sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btnDialogNo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:text="No"
+            android:textAllCaps="false"
+            android:background="@drawable/background_button_gray"/>
+        <Space
+            android:layout_width="8dp"
+            android:layout_height="match_parent" />
+        <Button
+            android:id="@+id/btnDialogYes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:text="Yes"
+            android:textColor="@color/colorWhite"
+            android:textAllCaps="false"
+            android:background="@drawable/background_button_green"/>
+    </LinearLayout>
+</LinearLayout>
