@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.baoyz.widget.PullRefreshLayout;
 import com.loopj.android.http.JsonHttpResponseHandler;
 
 import org.json.JSONArray;
@@ -36,6 +37,7 @@ import vn.busmap.busstation.Utils.Services;
  */
 
 public class BusListFragment extends Fragment {
+    @BindView(R.id.pullRefreshLayout) PullRefreshLayout pullRefreshLayout;
     @BindView(R.id.recyclerView) RecyclerView recyclerView;
 
     ArrayList<BusModel> busModels = new ArrayList<>();
@@ -55,6 +57,23 @@ public class BusListFragment extends Fragment {
         MainActivity.actionTitle.setText("Detail");
 
         ButterKnife.bind(this, view);
+
+//        pullRefreshLayout.setRefreshStyle(PullRefreshLayout.STYLE_SMARTISAN);
+        pullRefreshLayout.setOnRefreshListener(new PullRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                if (busModels.size() > 0) busModels.clear();
+
+                Bundle bundle = getArguments();
+                if (bundle != null) {
+                    if (bundle.getString("STATION_ID") != null) {
+                        final String stationId = bundle.getString("STATION_ID");
+
+                        requestToServer(stationId);
+                    }
+                }
+            }
+        });
 
         setupRecyclerView(this.recyclerView);
     }
@@ -125,12 +144,14 @@ public class BusListFragment extends Fragment {
                 }
 
                 dialog.dismiss();
+                pullRefreshLayout.setRefreshing(false);
             }
 
             @Override
             public void onFailure(int statusCode, Header[] headers, String responseString, Throwable throwable) {
                 super.onFailure(statusCode, headers, responseString, throwable);
                 dialog.dismiss();
+                pullRefreshLayout.setRefreshing(false);
             }
         });
     }

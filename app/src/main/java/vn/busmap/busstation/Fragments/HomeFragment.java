@@ -131,7 +131,7 @@ public class HomeFragment extends Fragment implements OnCompleteListener<Locatio
         client.getLastLocation().addOnCompleteListener(getActivity(), this);
 
         locationRequest = new LocationRequest();
-        locationRequest.setInterval(10000);
+        locationRequest.setInterval(30000);
         locationRequest.setFastestInterval(5000);
         locationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
 

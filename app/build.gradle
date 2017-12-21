@@ -37,6 +37,7 @@ dependencies {
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
     compile 'com.jaeger.statusbarutil:library:1.4.0'
     compile 'com.getbase:floatingactionbutton:1.10.1'
+    compile 'com.baoyz.pullrefreshlayout:library:1.2.0'
 
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     testCompile 'junit:junit:4.12'

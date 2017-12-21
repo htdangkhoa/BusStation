@@ -3,6 +3,15 @@
 
     <item
         is-multidex="true"
+        jar="/Users/dangkhoa/.android/build-cache/7ce8760a5a030f02fabd77d2f56c5d2b253daebf/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d05c16d86108d3d34377946a79d79f8485a46bfa">
+        <dex dex="/Users/dangkhoa/Desktop/StartBusStation/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_c68439b8f7c627a50362583612e5e226e061f8e0/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/Users/dangkhoa/Desktop/StartBusStation/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
         jumboMode="true"
         optimize="true"

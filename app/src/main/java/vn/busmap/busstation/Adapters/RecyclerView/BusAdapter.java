@@ -57,8 +57,10 @@ public class BusAdapter extends RecyclerView.Adapter<BusAdapter.ViewHolder> {
             holder.textViews.get(2).setText("No " + busModels.get(position).getRouteNo() + " - " + String.format("%3.1f", busModels.get(position).getDistance()) + "m");
         }
 
-        int time = Integer.parseInt(busModels.get(position).getTime());
-        holder.textViews.get(3).setText(time + ((time > 2) ? " minutes" : " minute"));
+        String strTime = busModels.get(position).getTime();
+//        int time = Integer.parseInt(strTime.substring(strTime.lastIndexOf(" "), strTime.length()));
+//        holder.textViews.get(3).setText(strTime + ((time > 2) ? " minutes" : " minute"));
+        holder.textViews.get(3).setText(strTime + " min");
         holder.textViews.get(4).setText(busModels.get(position).getRouteName());
 
         int direction = busModels.get(position).getDirection();
